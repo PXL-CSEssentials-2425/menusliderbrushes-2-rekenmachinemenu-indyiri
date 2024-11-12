@@ -78,7 +78,7 @@ namespace H9Oef2RekenmachineMenu
                     break;
             }
 
-            resultTextBox.Text = result.ToString();
+            resultTextBox.Text = Math.Round(result,5).ToString();
         }
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
@@ -119,12 +119,45 @@ namespace H9Oef2RekenmachineMenu
 
         private void closeMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult answer = MessageBox.Show("Bent u zeker dat u wilt afsluiten?","Afsluiten",MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
 
         }
 
         private void calculateMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            MenuItem menuItem = sender as MenuItem;
 
+            if (ReadNumbers(number1TextBox.Text, number2TextBox.Text))
+            {
+                if (menuItem == addMenuItem)
+                {
+                    Calculate(number1, number2, '+');
+                }
+                else if (menuItem == minusMenuItem)
+                {
+                    Calculate(number1, number2, '-');
+                }
+                else if (menuItem == multiplyMenuItem)
+                {
+                    Calculate(number1, number2, '*');
+                }
+                else if (menuItem == divideMenuItem)
+                {
+                    if (number2 != 0)
+                    {
+                        Calculate(number1, number2, default);
+                    }
+                    else
+                    {
+                        resultTextBox.Text = "Cannot divide by zero";
+                    }
+                }
+            }
         }
     }
 }

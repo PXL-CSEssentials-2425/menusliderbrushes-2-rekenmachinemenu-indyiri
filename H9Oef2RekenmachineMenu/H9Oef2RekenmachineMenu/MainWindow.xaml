@@ -23,7 +23,7 @@
         <Label x:Name="resultLabel" Content="Resultaat" HorizontalAlignment="Left" Margin="119,287,0,0" VerticalAlignment="Top" Width="105" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="number1TextBox" HorizontalAlignment="Left" Height="26" Margin="267,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
         <TextBox x:Name="number2TextBox" HorizontalAlignment="Left" Height="26" Margin="267,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="26" Margin="267,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="26" Margin="267,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" IsEnabled="False"/>
         <Button x:Name="addButton" Content="+" HorizontalAlignment="Left" Margin="555,99,0,0" VerticalAlignment="Top" Height="40
                 " Width="40
                 " FontSize="24" Click="calculateButton_Click"/>

@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Menu>
+            <MenuItem Header="Bestand">
+                <MenuItem Header="Afsluiten" x:Name="closeMenuItem" Click="closeMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Aard oefening">
+                <MenuItem Header="Optellen" x:Name="addMenuItem" IsCheckable="True" Click="calculateMenuItem_Click"/>
+                <MenuItem Header="Aftrekken" x:Name="minusMenuItem" IsCheckable="True" Click="calculateMenuItem_Click"/>
+                <MenuItem Header="Vermenigvuldigen" x:Name="multiplyMenuItem" IsCheckable="True" Click="calculateMenuItem_Click"/>
+                <MenuItem Header="Delen" x:Name="divideMenuItem" IsCheckable="True" Click="calculateMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="number1Label" Content="Getal 1" HorizontalAlignment="Left" Margin="119,99,0,0" VerticalAlignment="Top" Width="105" HorizontalContentAlignment="Center"/>
+        <Label x:Name="number2Label" Content="Getal 2" HorizontalAlignment="Left" Margin="119,163,0,0" VerticalAlignment="Top" Width="105" HorizontalContentAlignment="Center"/>
+        <Label x:Name="resultLabel" Content="Resultaat" HorizontalAlignment="Left" Margin="119,287,0,0" VerticalAlignment="Top" Width="105" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="number1TextBox" HorizontalAlignment="Left" Height="26" Margin="267,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="number2TextBox" HorizontalAlignment="Left" Height="26" Margin="267,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Height="26" Margin="267,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False"/>
+        <Button x:Name="addButton" Content="+" HorizontalAlignment="Left" Margin="555,99,0,0" VerticalAlignment="Top" Height="40
+                " Width="40
+                " FontSize="24" Click="calculateButton_Click"/>
+        <Button x:Name="minusButton" Content="-" HorizontalAlignment="Left" Margin="640,99,0,0" VerticalAlignment="Top" Height="40" Width="40" FontSize="24" Click="calculateButton_Click"/>
+        <Button x:Name="multiplyButton" Content="*" HorizontalAlignment="Left" Margin="555,176,0,0" VerticalAlignment="Top" Height="40" Width="40" FontSize="24" Click="calculateButton_Click"/>
+        <Button x:Name="divideButton" Content="/" HorizontalAlignment="Left" Margin="640,176,0,0" VerticalAlignment="Top" Height="40" Width="40" FontSize="22" Click="calculateButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Height="40" Margin="555,280,0,0" VerticalAlignment="Top" Width="125" FontSize="16" Click="clearButton_Click"/>
     </Grid>
 </Window>
